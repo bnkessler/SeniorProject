@@ -43,7 +43,7 @@ min_angle, max_angle = draw_detector(DIAMETER, LENGTH, DISTANCE)
 source = Source("cs137", ENERGY, START, DENSITY)
 plt.xlabel("x [cm]")
 plt.ylabel("y [cm]")
-plt.title()
+plt.title("Gamma Ray Absorption")
 
 lengths = []
 for i in range(10000):
@@ -53,6 +53,7 @@ plt.figure(2)
 plt.hist(lengths)
 plt.xlabel("Gamma Ray Penetration Depth [cm]")
 plt.ylabel("Counts")
+plt.title("Penetration Depth Histogram")
 
 for i in range(500):
     angle = gamma_emission()
