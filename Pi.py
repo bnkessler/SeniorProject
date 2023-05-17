@@ -5,8 +5,8 @@ import random
 length = 2
 radius = int(length/2)
 theta = np.linspace(0, 2 * np.pi, 500)
-trials = 1000000
-runs = 100
+trials = 1000
+runs = 1
 
 
 def draw_box():
@@ -22,14 +22,14 @@ def pi_avg(runs):
     sum = 0
     for i in range(runs):
         print(f"Run: {i+1}")
-        # draw_box()
+        draw_box()
         coords = []
         for i in range(trials):
             x = random.uniform(-1, 1)
             y = random.uniform(-1, 1)
-            # plt.plot(x, y, "b.")
+            plt.plot(x, y, "b.")
             coords.append([x, y])
-        # plt.show()
+        plt.show()
 
         counts = 0
         for val in coords:
